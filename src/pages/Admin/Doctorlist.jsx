@@ -6,7 +6,9 @@ const Doctorlist = () => {
 const {doctordata, checkavailability, getDoctors} = useContext(AdminContext);
 
 useEffect(()=>{
+  if(doctordata)
   getDoctors();
+
 },[])
 
 if(doctordata.length === 0){
